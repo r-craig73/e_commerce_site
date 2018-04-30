@@ -5,9 +5,21 @@ class OrderItemsController < ApplicationController
       @item = @order.order_items.new(item_params)
       @order.save
       session[:order_id] = @order.id
-      flash[:notice] = "Order is added to the shopping cart"
+      flash[:notice] = "Your order is added to the shopping cart"
       redirect_to products_path
     end
+
+  def destroy
+    @order = current_order
+    @item = @order.order_items.find(params[:id])
+    @item.destroy
+    @order.save
+    flash[:notice] = "Your order is removed to the shopping cart"
+    redirect_to cart_path
+  end
+
+
+
 
     private
 
