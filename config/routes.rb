@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :accounts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :products do
-    resources :order_items
-  end
+  resources :products
+  resources :order_items
+
 
 end
