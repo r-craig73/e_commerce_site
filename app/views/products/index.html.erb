@@ -1,12 +1,26 @@
-<% @products.each do |product| %>
-  <p><%= product.name %> | <%= number_to_currency product.price %>
-  <p><%= product.description %>
-  <%= form_for @order_item do |f| %>
-    <%= f.hidden_field :product_id, value: product.id %>
-    <%= f.number_field :quantity %>
-    <%= f.submit "Add to cart" %>
-  <% end %></p>
-<% end %>
+<div class="container">
+  <div class="jumbotron" align="center">
+    <h2>Simpson's Action Figure Outlet</h2>
+  </div>
+</div>
+
+<div class="container">
+  <% @products.each do |product| %>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <div class="thumbnail">
+      <p><%= product.name %> | <%= number_to_currency product.price %>
+      <p><%= product.description %>
+      <%= form_for @order_item do |f| %>
+        <%= f.hidden_field :product_id, value: product.id %>
+        <%= f.number_field :quantity %>
+        <%= f.submit "Add to cart" %>
+      <% end %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <div class="container">
   <h4><%= link_to "Check out your shopping cart", cart_path %></h4>
