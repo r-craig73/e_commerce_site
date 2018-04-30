@@ -1,7 +1,6 @@
 class Order < ApplicationRecord
   # belongs_to :account
   has_many :order_items
-
   before_save :update_total
   before_create :update_status
 
@@ -20,5 +19,4 @@ class Order < ApplicationRecord
   def update_total
     self.total_price = calculate_total
   end
-
 end
