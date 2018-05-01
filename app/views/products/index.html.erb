@@ -1,6 +1,6 @@
 <div class="container">
   <div class="jumbotron" align="center">
-    <h2>Simpson's Action Figure Outlet</h2>
+    <h2>Simpsons Action Figure Outlet</h2>
   </div>
 </div>
 
@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-12" align="center">
       <div class="thumbnail">
-      <p><%= product.name %> | <%= number_to_currency product.price %>
+      <p><%= link_to product.name, product_path(product) %> | <%= number_to_currency product.price %>
       <p><%= product.description %>
       <%= form_for @order_item do |f| %>
         <%= f.hidden_field :product_id, value: product.id %>
@@ -22,6 +22,7 @@
   <% end %>
 </div>
 
+<hr>
 <div class="container">
   <h4><%= link_to "Check out your shopping cart", cart_path %></h4>
 </div>
