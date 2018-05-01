@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Book do
+describe Book, :vcr => true do
   it "returns an OK success header when the API call is made" do
     response = JSON.parse(Book.get_bestseller_list)
     expect(response["status"]).to(eq("OK"))

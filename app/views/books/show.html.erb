@@ -3,13 +3,15 @@
 </div>
 <hr>
 
-  <h3>List of titles</h3>
+<h3 align="center">New York Times best selling books this week</h3>
 <div class="container">
+  <div class="thumbnail">
     <% data = JSON.parse(@response) %>
     <% data["results"]["books"].each do |book| %>
-      <%= book["title"].titleize %>
+      <%= book["rank"] %>: <%= book["title"].titleize %>
       <br>
     <% end %>
+  </div>
 </div>
 
 <hr>
