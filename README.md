@@ -5,7 +5,7 @@
 
 #### Things to do
 1. CRUD-L products
-2. Put
+2. Add either featured or sale products
 
 ### E-Commerce User stories
 - [x] As a user, I should be able to add and remove items from my shopping cart.
@@ -16,4 +16,4 @@
 - [ ]
 
 ### Admin stories
-- [ ]
+- [ ] As an admin, I should have full CRUD-L functionality to add products.

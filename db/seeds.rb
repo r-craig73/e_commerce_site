@@ -10,7 +10,6 @@ Product.destroy_all
   @created_at = Faker::Time.backward(8, :all)
   Product.create!(name: @name, price: @price, description: @description, created_at: @created_at)
   @product_id = Product.last.id
-
 end
 
 # rake db:drop db:create db:migrate
