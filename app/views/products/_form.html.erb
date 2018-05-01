@@ -1,0 +1,29 @@
+<%= render "layouts/errors", :object => @product %>
+
+<%= form_for @product do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.label :name, "Name"%>
+      <%= f.text_field :name, size: 30 %>
+    </div>
+    <div class="col-md-6">
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description, size: "40x10"%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    <%= f.label :price, "Price" %>
+    <%= f.number_field :price %>
+    </div>
+    <div class="col-md-6">
+      <%= f.submit "Update or Add Product" %>
+    </div>
+  </div>
+</div>
+<% end %>
+<hr>
+<div class="container">
+  <h4><%= link_to "Go Home", products_path %></h4>
+</div>
