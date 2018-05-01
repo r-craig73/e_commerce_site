@@ -3,6 +3,16 @@
 </div>
 <hr>
 
+  <h3>List of titles</h3>
 <div class="container">
-  <%= @response %>
+    <% data = JSON.parse(@response) %>
+    <% data["results"]["books"].each do |book| %>
+      <%= book["title"].titleize %>
+      <br>
+    <% end %>
+</div>
+
+<hr>
+<div class="container">
+  <%=  @response %>
 </div>
