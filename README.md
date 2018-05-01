@@ -3,16 +3,9 @@
 ### Description
 #### An application for E-Commerce users to shop and order Simpson's action figures.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+#### Things to do
+1. CRUD-L products
+2. Put
 
 ### E-Commerce User stories
 - [x] As a user, I should be able to add and remove items from my shopping cart.

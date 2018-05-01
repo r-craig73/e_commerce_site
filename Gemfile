@@ -40,7 +40,6 @@ gem 'devise'
 gem "paperclip", "~> 6.0.0"
 gem 'faker'
 gem 'bootstrap-sass', '~> 3.3.7'
-gem 'bootstrap'
 # try materialize this week?
 gem 'rest-client'
 

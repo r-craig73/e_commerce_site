@@ -1,8 +1,7 @@
 class BooksController < ApplicationController
 
   def show
-    api_call = Book.new
-    @response = api_call.make_NYT_API_call()
+    @response = Book.get_bestseller_list()
   end
 
 end
