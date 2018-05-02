@@ -1,7 +1,7 @@
 <%= render "layouts/errors", :object => @product %>
 
-<%= form_for @product do |f| %>
 <div class="container">
+<%= form_for @product, remote: true do |f| %>
   <div class="row">
     <div class="col-md-6">
       <%= f.label :name, "Name"%>
@@ -21,8 +21,9 @@
       <%= f.submit "Update or Add Product" %>
     </div>
   </div>
-</div>
 <% end %>
+</div>
+
 <hr>
 <div class="container">
   <h4><%= link_to "Go Home", products_path %></h4>

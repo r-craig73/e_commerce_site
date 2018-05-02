@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="all_products">
   <% @products.each do |product| %>
   <div class="row">
     <div class="col-md-12" align="center">
@@ -14,16 +14,17 @@
       <%= form_for @order_item do |f| %>
         <%= f.hidden_field :product_id, value: product.id %>
         <%= f.number_field :quantity %>
-        <%= f.submit "Add to cart" %>
-      <% end %></p>
+        <%= f.submit "Add to cart" %></p>
+      <% end %>
       </div>
     </div>
   </div>
   <% end %>
 </div>
 <hr>
+
 <div class="container">
-  <h4>Admin: <%= link_to "Add a product", new_product_path %></h4>
+  <h4><%= link_to "Add a product", new_product_path, id: "new_product_link", remote: true %></h4>
 </div>
 
 <hr>

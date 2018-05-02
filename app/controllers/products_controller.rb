@@ -1,13 +1,9 @@
 class ProductsController < ApplicationController
 
   def index
-    sleep 0.8
+    sleep 1
     @products = Product.all
     @order_item = current_order.order_items.new
-  end
-
-  def new
-    @product = Product.new
   end
 
   def show
@@ -29,11 +25,19 @@ class ProductsController < ApplicationController
       end
   end
 
+  def new
+    @product = Product.new
+  end
+
   def create
     @product = Product.new(product_params)
+    # binding.pry
     if @product.save
-      flash[:notice] = "Product is now added to the inventory"
-      redirect_to products_path
+      flash[:notice] = "Product is now added to inventory"
+      respond_to do |format|
+        format.html { redirect_to products_url }
+        format.js
+      end
     else
       render :new
     end
