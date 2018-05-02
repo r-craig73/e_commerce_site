@@ -8,7 +8,7 @@
   <div class="thumbnail">
     <% data = JSON.parse(@response) %>
     <% data["results"]["books"].each do |book| %>
-      <%= book["rank"] %>: <%= book["title"].titleize %>
+      <%= book["rank"] %>: <%= book["title"].titleize %>, by <%= book["author"] %> 
       <br>
     <% end %>
   </div>
