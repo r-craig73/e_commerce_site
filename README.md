@@ -43,6 +43,3 @@
 * There are soooooo many Ruby gem dependencies. Here's a list of the dependencies used (coming soon).
 
 Copyright (c) 2018 **_RC productions_**
-
-
-Copyright (c) 2018 RC productions
