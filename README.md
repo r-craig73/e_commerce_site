@@ -12,11 +12,12 @@
 - [ ] As a user, my shopping cart should be cleared once I've completed my order.
 - [ ] As a user, I'd like to see the number of items in my shopping cart and the total cost of my order in the navbar (and not just on the shopping cart page).
 - [ ] As a user, I'd like to be able to see which items are on sale, along with the percentage they've been discounted.
-- [ ] TBD
+- [ ] As a user, I'd like to see if there are fewer than ten of an item in stock.
 
 ### Admin stories
-- [x] As an admin, I should have full CRUD-L functionality to add products (as a user, not as an admin).
+- [x] As an admin, I should have full CRUD-L functionality to add products (as a user, not as an admin yet).
 - [ ] As an admin, I'd like to be able to feature certain items by using a "featured" boolean.
+- [ ] As an admin, I'd like to be able to easily mark an item as on sale. (Items could have a sale_price as well as a list_price.)
 
 
 ### Application instructions (assuming Mac OS)
@@ -32,7 +33,7 @@
 
 * Rspec setup (Unit Testing and Models): In the terminal, run the following command `$ bundle exec rails generate rspec:install`. Files will be generated in the spec folder.  In the home repository folder run `$ rspec` to view tests passing or failing.
 
-* Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. Run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file.  To run a seed to populate a database, rung `$ rake db:seed`.
+* Database setup: Run `$ rake db:create` to generate a database. Run `$ rails generate migration action_name` generate a migration file for table manipulation. After generating the necessary tables, run `$ rake db:migrate` to prepare the database. Run `$ rake db:test:prepare` to create the Active Record schema.rb file.  To run a seed to populate a database, run `$ rake db:seed`.
 
 * Rails server: Run `$ rails server` to start the Rails server.  Navigate to `http://localhost:3000`.  Refresh the page to reload any changes to the source files.
 
