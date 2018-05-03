@@ -8,6 +8,8 @@
 
 ### E-Commerce User stories
 - [x] As a user, I should be able to add and remove items from my shopping cart.
+- [ ] As a user, I'd like to click on a product and see the product detail without going to a new page.
+- [ ] As a user, I'd like to add an item to my shopping cart without refreshing the page.
 - [ ] As a user, I'd like to see my shopping cart updated when I make changes.
 - [ ] As a user, my shopping cart should be cleared once I've completed my order.
 - [ ] As a user, I'd like to see the number of items in my shopping cart and the total cost of my order in the navbar (and not just on the shopping cart page).
@@ -16,6 +18,8 @@
 
 ### Admin stories
 - [x] As an admin, I should have full CRUD-L functionality to add products (as a user, not as an admin yet).
+- [x] As an admin, I'd like to create products without going to a new page.
+- [ ] As an admin, I'd like to update and delete products without going to a new page.
 - [ ] As an admin, I'd like to be able to feature certain items by using a "featured" boolean.
 - [ ] As an admin, I'd like to be able to easily mark an item as on sale. (Items could have a sale_price as well as a list_price.)
 

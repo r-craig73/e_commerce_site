@@ -5,7 +5,10 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><%= link_to "Shopping cart", '/cart' %></li>
+        <% if @order_items %>
+         <% else %>
+          <li><%= link_to "Shopping cart", '/cart' %></li>
+        <% end %>
       </ul>
     </div>
   </div>
