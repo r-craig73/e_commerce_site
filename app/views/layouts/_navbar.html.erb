@@ -3,13 +3,14 @@
     <div class="navbar-header">
       <div class="navbar-brand"><%= link_to "Simpsons Action Figures Outlet", products_path %></div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if @order_items %>
          <% else %>
           <li><%= link_to "Shopping cart", '/cart' %></li>
         <% end %>
       </ul>
-    </div>
+    <ul class="nav navbar-brand navbar-right">
+      <li>Test</li>
+    </ul>
   </div>
 </nav>

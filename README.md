@@ -27,7 +27,7 @@
 ### Application instructions (assuming Mac OS)
 * If you want to use Postgres for the database and not to install Rail's testing tools, create a file called `.railsrc` in your home directory (using the text editor of your choice) and add the line `-d postgresql -T`
 
-* Clone the repository and direct your terminal into the home repository folder `Computer:steves_sock_shack user$`
+* Clone the repository and move to the home repository folder `Computer:steves_sock_shack user$`
 
 * Run `$ gem install rails`
 
